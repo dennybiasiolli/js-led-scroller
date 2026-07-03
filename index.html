@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>LED Scroller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="scroller" class="scroller" aria-label="LED text display">
+    <div class="scroller-track">
+      <span id="led-text" class="led-text">HELLO WORLD</span>
+    </div>
+  </main>
+
+  <button id="settings-toggle" class="settings-toggle" type="button" aria-expanded="false" aria-controls="settings-panel">
+    ⚙
+  </button>
+
+  <aside id="settings-panel" class="settings-panel" hidden>
+    <h1>LED Scroller</h1>
+
+    <label class="field">
+      <span>Text</span>
+      <input id="text-input" type="text" maxlength="200" value="HELLO WORLD" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span>Text color</span>
+      <input id="text-color" type="color" value="#00ff41">
+    </label>
+
+    <label class="field">
+      <span>Background</span>
+      <input id="bg-color" type="color" value="#0a0a0a">
+    </label>
+
+    <label class="field">
+      <span>Speed <output id="speed-value">50</output></span>
+      <input id="speed" type="range" min="10" max="200" value="50">
+    </label>
+
+    <label class="field">
+      <span>Font size <output id="font-size-value">Auto</output></span>
+      <input id="font-size" type="range" min="0" max="100" value="0">
+    </label>
+
+    <p class="hint">Font size 0 = auto (adapts to orientation)</p>
+
+    <button id="close-settings" class="btn" type="button">Done</button>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
