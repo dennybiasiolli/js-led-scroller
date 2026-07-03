@@ -6,7 +6,7 @@
     text: "HELLO WORLD",
     textColor: "#00ff41",
     bgColor: "#0a0a0a",
-    speed: 50,
+    speed: 100,
     fontSize: 0,
   };
 
