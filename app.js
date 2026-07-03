@@ -97,7 +97,9 @@
   }
 
   function pixelsPerSecond() {
-    return state.speed * 2;
+    var w = window.innerWidth;
+    var minDim = Math.min(w, window.innerHeight);
+    return state.speed * 2 * (w / minDim);
   }
 
   function tick(now) {
