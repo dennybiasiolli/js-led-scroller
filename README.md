@@ -16,7 +16,7 @@ A simple full-screen LED-style text scroller for iPhone (and any mobile browser)
 ### Option 1: Local dev server (same Wi‑Fi)
 
 ```bash
-cd html-led-scroller
+cd js-led-scroller
 python3 -m http.server 8080
 ```
 
